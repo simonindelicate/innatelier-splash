@@ -1,0 +1,242 @@
+:root {
+  --text: #d7fbff;
+  --text-soft: rgba(255, 255, 255, 0.9);
+  --text-muted: rgba(255, 255, 255, 0.84);
+  --button-bg: #9ffcff;
+  --button-text: #160008;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #140006;
+}
+
+.splash {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  place-items: center;
+  padding: 48px 24px;
+  background-image: url("../assets/Helix.png"), url("../assets/BG.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 54px center, center;
+  background-size: auto 100vh, cover;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.splash__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 760px);
+  transform: translateY(-2px);
+}
+
+.splash__title {
+  margin: 0;
+  padding-left: 0.24em;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(5.4rem, 8vw, 8.25rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: 0.24em;
+  text-shadow: 0 0 18px rgba(174, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.splash__strapline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 22px 0 0;
+  padding-left: 0.42em;
+  color: var(--text-soft);
+  font-size: clamp(1.02rem, 1.42vw, 1.42rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.42em;
+}
+
+.splash__strapline::after {
+  width: min(456px, 64vw);
+  height: 1px;
+  margin-top: 31px;
+  background: rgba(255, 255, 255, 0.32);
+  content: "";
+}
+
+.splash__copy {
+  width: min(100%, 480px);
+  margin: 56px auto 0;
+  color: var(--text-muted);
+  font-size: 1.08rem;
+  font-weight: 300;
+  line-height: 1.24;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.22);
+}
+
+.splash__copy p {
+  margin: 0;
+}
+
+.splash__copy p + p {
+  margin-top: 22px;
+}
+
+.splash__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 198px;
+  min-height: 48px;
+  margin-top: 28px;
+  padding: 14px 24px 13px;
+  border-radius: 999px;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.34em;
+  line-height: 1;
+  text-decoration: none;
+  text-indent: 0.34em;
+}
+
+.splash__button:hover,
+.splash__button:focus-visible {
+  background: #c4ffff;
+}
+
+.splash__button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.82);
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .splash {
+    align-items: start;
+    padding: 29.1vh 24px 40px;
+    background-image: url("../assets/Helix.png"), url("../assets/BG.png");
+    background-position: left calc(50% + 24px) bottom -6px, center;
+    background-size: min(142vw, 532px) auto, cover;
+  }
+
+  .splash__content {
+    width: min(100%, 340px);
+    transform: none;
+  }
+
+  .splash__title {
+    padding-left: 0.16em;
+    font-size: clamp(2.55rem, 14.5vw, 4.05rem);
+    line-height: 0.95;
+    letter-spacing: 0.16em;
+  }
+
+  .splash__strapline {
+    margin-top: 8px;
+    padding-left: 0.35em;
+    font-size: clamp(0.55rem, 2.55vw, 0.75rem);
+    letter-spacing: 0.35em;
+  }
+
+  .splash__strapline::after {
+    width: min(200px, 64vw);
+    margin-top: 25px;
+  }
+
+  .splash__copy {
+    width: min(100%, 328px);
+    margin-top: 47px;
+    font-size: clamp(1rem, 4.25vw, 1.08rem);
+    line-height: 1.18;
+  }
+
+  .splash__copy p + p {
+    margin-top: 21px;
+  }
+
+  .splash__button {
+    min-width: 199px;
+    min-height: 47px;
+    margin-top: 24px;
+    padding-inline: 23px;
+    font-size: 0.64rem;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+  }
+}
+
+@media (max-width: 360px) {
+  .splash {
+    padding: 27vh 16px 32px;
+  }
+
+  .splash__content {
+    width: 100%;
+  }
+
+  .splash__title {
+    padding-left: 0.13em;
+    font-size: clamp(2.35rem, 13.8vw, 3rem);
+    letter-spacing: 0.13em;
+  }
+
+  .splash__strapline {
+    padding-left: 0.25em;
+    font-size: clamp(0.5rem, 2.45vw, 0.62rem);
+    letter-spacing: 0.25em;
+  }
+
+  .splash__strapline::after {
+    margin-top: 20px;
+  }
+
+  .splash__copy {
+    margin-top: 38px;
+    font-size: clamp(0.88rem, 4.6vw, 0.95rem);
+  }
+
+  .splash__copy p + p {
+    margin-top: 17px;
+  }
+
+  .splash__button {
+    min-width: 184px;
+    min-height: 44px;
+    margin-top: 20px;
+    font-size: 0.58rem;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 701px) {
+  .splash {
+    padding-block: 30px;
+  }
+
+  .splash__title {
+    font-size: clamp(4.7rem, 7.2vw, 7rem);
+  }
+
+  .splash__copy {
+    margin-top: 38px;
+  }
+}
