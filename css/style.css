@@ -4,6 +4,7 @@
   --text-muted: rgba(255, 255, 255, 0.84);
   --button-bg: #9ffcff;
   --button-text: #160008;
+  --button-hover-bg: #f9eeee;
 }
 
 * {
@@ -118,11 +119,14 @@ body {
   line-height: 1;
   text-decoration: none;
   text-indent: 0.34em;
+  transition: background-color 280ms ease, transform 280ms ease, box-shadow 280ms ease;
 }
 
 .splash__button:hover,
 .splash__button:focus-visible {
-  background: #c4ffff;
+  background: var(--button-hover-bg);
+  box-shadow: 0 10px 24px rgba(20, 0, 6, 0.22);
+  transform: translateY(-1px);
 }
 
 .splash__button:focus-visible {
@@ -134,9 +138,22 @@ body {
   .splash {
     align-items: start;
     padding: 29.1vh 24px 40px;
-    background-image: url("../assets/Helix.png"), url("../assets/BG.png");
-    background-position: left calc(50% + 24px) bottom -6px, center;
-    /* background-size: min(142vw, 532px) auto, cover; */
+    background-image: url("../assets/BG.png");
+    background-position: center;
+    isolation: isolate;
+  }
+
+  .splash::before {
+    position: absolute;
+    z-index: 0;
+    inset: auto auto -18px 50%;
+    width: min(136vw, 548px);
+    aspect-ratio: 532 / 1008;
+    background: url("../assets/Helix.png") no-repeat center / contain;
+    content: "";
+    transform: translateX(-56%) rotate(-20deg);
+    transform-origin: center;
+    pointer-events: none;
   }
 
   .splash__content {
