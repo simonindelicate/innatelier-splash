@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
+
 :root {
   --text: #d7fbff;
   --text-soft: rgba(255, 255, 255, 0.9);
@@ -18,7 +20,7 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background-color: #140006;
 }
 
@@ -52,14 +54,14 @@ body {
 .splash__title {
   margin: 0;
   padding-left: 0.24em;
-  color: var(--text);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(5.4rem, 8vw, 8.25rem);
-  font-weight: 400;
-  line-height: 0.88;
-  letter-spacing: 0.24em;
-  text-shadow: 0 0 18px rgba(174, 255, 255, 0.1);
-  white-space: nowrap;
+  line-height: 0;
+}
+
+.splash__title-logo {
+  display: block;
+  height: clamp(5.4rem, 8vw, 8.25rem);
+  width: auto;
+  filter: drop-shadow(0 0 18px rgba(174, 255, 255, 0.1));
 }
 
 .splash__strapline {
@@ -166,9 +168,10 @@ body {
 
   .splash__title {
     padding-left: 0.16em;
-    font-size: clamp(2.55rem, 14.5vw, 4.05rem);
-    line-height: 0.95;
-    letter-spacing: 0.16em;
+  }
+
+  .splash__title-logo {
+    height: clamp(2.55rem, 14.5vw, 4.05rem);
   }
 
   .splash__strapline {
@@ -216,8 +219,10 @@ body {
 
   .splash__title {
     padding-left: 0.13em;
-    font-size: clamp(2.35rem, 13.8vw, 3rem);
-    letter-spacing: 0.13em;
+  }
+
+  .splash__title-logo {
+    height: clamp(2.35rem, 13.8vw, 3rem);
   }
 
   .splash__strapline {
@@ -252,8 +257,8 @@ body {
     padding-block: 30px;
   }
 
-  .splash__title {
-    font-size: clamp(4.7rem, 7.2vw, 7rem);
+  .splash__title-logo {
+    height: clamp(4.7rem, 7.2vw, 7rem);
   }
 
   .splash__copy {
