@@ -53,14 +53,15 @@ body {
 
 .splash__title {
   margin: 0;
-  padding-left: 0.24em;
+  padding-left: 0.12em;
   line-height: 0;
 }
 
 .splash__title-logo {
   display: block;
-  height: clamp(5.4rem, 8vw, 8.25rem);
-  width: auto;
+  width: clamp(300px, 42vw, 698px);
+  max-width: 100%;
+  height: auto;
   filter: drop-shadow(0 0 18px rgba(174, 255, 255, 0.1));
 }
 
@@ -162,16 +163,16 @@ body {
 }
 
   .splash__content {
-    width: min(100%, 340px);
+    width: min(100%, 356px);
     transform: none;
   }
 
   .splash__title {
-    padding-left: 0.16em;
+    padding-left: 0.08em;
   }
 
   .splash__title-logo {
-    height: clamp(2.55rem, 14.5vw, 4.05rem);
+    width: clamp(214px, 72vw, 306px);
   }
 
   .splash__strapline {
@@ -218,11 +219,11 @@ body {
   }
 
   .splash__title {
-    padding-left: 0.13em;
+    padding-left: 0.05em;
   }
 
   .splash__title-logo {
-    height: clamp(2.35rem, 13.8vw, 3rem);
+    width: clamp(196px, 74vw, 260px);
   }
 
   .splash__strapline {
@@ -252,13 +253,27 @@ body {
   }
 }
 
+@media (max-height: 760px) and (max-width: 700px) {
+  .splash {
+    padding-top: 24vh;
+  }
+
+  .splash__strapline {
+    margin-top: 10px;
+  }
+
+  .splash__copy {
+    margin-top: 38px;
+  }
+}
+
 @media (max-height: 680px) and (min-width: 701px) {
   .splash {
     padding-block: 30px;
   }
 
   .splash__title-logo {
-    height: clamp(4.7rem, 7.2vw, 7rem);
+    width: clamp(272px, 40vw, 592px);
   }
 
   .splash__copy {
