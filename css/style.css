@@ -59,7 +59,7 @@ body {
 
 .splash__title-logo {
   display: block;
-  width: clamp(300px, 42vw, 698px);
+  width: clamp(559px, 53vw, 686px);
   max-width: 100%;
   height: auto;
   filter: drop-shadow(0 0 18px rgba(174, 255, 255, 0.1));
@@ -72,7 +72,7 @@ body {
   margin: 22px 0 0;
   padding-left: 0.42em;
   color: var(--text-soft);
-  font-size: clamp(1.02rem, 1.42vw, 1.42rem);
+  font-size: clamp(1.02rem, 0.42vw, 1.42rem);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.42em;
@@ -129,7 +129,7 @@ body {
 .splash__button:focus-visible {
   background: var(--button-hover-bg);
   box-shadow: 0 10px 24px rgba(20, 0, 6, 0.22);
-  transform: translateY(-1px);
+ /*transform: translateY(-1px);*/
 }
 
 .splash__button:focus-visible {
@@ -171,9 +171,9 @@ body {
     padding-left: 0.08em;
   }
 
-  .splash__title-logo {
-    width: clamp(214px, 72vw, 306px);
-  }
+.splash__title-logo {
+  width: clamp(214px, 72vw, 354px);
+}
 
   .splash__strapline {
     margin-top: 8px;
