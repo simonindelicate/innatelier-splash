@@ -136,7 +136,7 @@ body {
     padding: 29.1vh 24px 40px;
     background-image: url("../assets/Helix.png"), url("../assets/BG.png");
     background-position: left calc(50% + 24px) bottom -6px, center;
-    background-size: min(142vw, 532px) auto, cover;
+    /* background-size: min(142vw, 532px) auto, cover; */
   }
 
   .splash__content {
@@ -239,4 +239,16 @@ body {
   .splash__copy {
     margin-top: 38px;
   }
+}
+
+.substack-embed-wrap {
+  width: min(100%, 480px);
+  margin: 1.25rem auto 0;
+}
+
+.substack-embed-wrap iframe {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
