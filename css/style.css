@@ -135,26 +135,29 @@ body {
 }
 
 @media (max-width: 700px) {
-  .splash {
-    align-items: start;
-    padding: 29.1vh 24px 40px;
-    background-image: url("../assets/BG.png");
-    background-position: center;
-    isolation: isolate;
-  }
+.splash {
+  align-items: start;
+  padding: 29.1vh 24px 40px;
+  background-image: url("../assets/BG.png");
+  background-position: center;
+  isolation: isolate;
+  position: relative;
+  overflow: clip;
+  isolation: isolate;
+}
 
-  .splash::before {
-    position: absolute;
-    z-index: 0;
-    inset: auto auto -18px 50%;
-    width: min(136vw, 548px);
-    aspect-ratio: 532 / 1008;
-    background: url("../assets/Helix.png") no-repeat center / contain;
-    content: "";
-    transform: translateX(-56%) rotate(-20deg);
-    transform-origin: center;
-    pointer-events: none;
-  }
+.splash::before {
+  position: absolute;
+  z-index: 0;
+  inset: auto auto -48% 55%;
+  width: min(116vw, 544px);
+  aspect-ratio: 532 / 1008;
+  background: url("../assets/Helix.png") no-repeat center / contain;
+  content: "";
+  transform: translateX(-56%) rotate(37deg);
+  transform-origin: center;
+  pointer-events: none;
+}
 
   .splash__content {
     width: min(100%, 340px);
