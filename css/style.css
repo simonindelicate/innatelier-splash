@@ -53,16 +53,36 @@ body {
 
 .splash__title {
   margin: 0;
-  padding-left: 0.12em;
-  line-height: 0;
+  color: var(--text);
+  font-family: Didot, "Bodoni MT", "Times New Roman", serif;
+  font-size: clamp(4.75rem, 8.25vw, 7.4rem);
+  font-weight: 400;
+  line-height: 0.8;
+  letter-spacing: 0.055em;
+  text-indent: 0.055em;
+  text-shadow: 0 0 18px rgba(174, 255, 255, 0.1);
 }
 
-.splash__title-logo {
-  display: block;
-  width: clamp(559px, 53vw, 686px);
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 18px rgba(174, 255, 255, 0.1));
+.splash__wordmark {
+  display: inline-block;
+  transform: scaleX(0.96);
+  transform-origin: center;
+}
+
+.splash__initial {
+  display: inline-block;
+  margin-right: 0.035em;
+}
+
+.splash__coming-soon {
+  margin: 34px 0 0;
+  padding-left: 0.42em;
+  color: var(--text-soft);
+  font-size: clamp(0.72rem, 0.42vw, 0.92rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
 }
 
 .splash__strapline {
@@ -168,12 +188,16 @@ body {
   }
 
   .splash__title {
-    padding-left: 0.08em;
+    font-size: clamp(3.15rem, 17vw, 4.25rem);
+    letter-spacing: 0.035em;
+    text-indent: 0.035em;
   }
 
-.splash__title-logo {
-  width: clamp(214px, 72vw, 354px);
-}
+  .splash__coming-soon {
+    margin-top: 24px;
+    font-size: clamp(0.58rem, 2.4vw, 0.7rem);
+    letter-spacing: 0.35em;
+  }
 
   .splash__strapline {
     margin-top: 8px;
@@ -219,11 +243,7 @@ body {
   }
 
   .splash__title {
-    padding-left: 0.05em;
-  }
-
-  .splash__title-logo {
-    width: clamp(196px, 74vw, 260px);
+    font-size: clamp(2.8rem, 16vw, 3.5rem);
   }
 
   .splash__strapline {
@@ -272,8 +292,8 @@ body {
     padding-block: 30px;
   }
 
-  .splash__title-logo {
-    width: clamp(272px, 40vw, 592px);
+  .splash__title {
+    font-size: clamp(4rem, 7vw, 6.25rem);
   }
 
   .splash__copy {
